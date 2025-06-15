@@ -1,0 +1,198 @@
+// @import "../../mixin.scss";
+
+// .hero-section {
+//   padding: 25px 0 114px;
+
+//   @media (max-width: 512px) {
+//     padding: 29px 0 99px;
+//   }
+// }
+
+// .hero {
+//   @include Display($items: center, $space: space-between, $gap: 0px, $FD: row);
+
+//   @media (max-width: 1040px) {
+//     @include Display(
+//       $items: center,
+//       $space: space-between,
+//       $gap: 10px,
+//       $FD: column-reverse
+//     );
+//   }
+
+//   &__content-wrapper {
+//     width: 419px;
+
+//     @media (max-width: 1040px) {
+//       width: 100%;
+//       text-align: center;
+//     }
+//   }
+
+//   &__title {
+//     @include TextStyle(
+//       $FW: 700,
+//       $FS: 40px,
+//       $LH: 60px,
+//       $LS: 0px,
+//       $CLR: #22343d,
+//       $MB: 18px
+//     );
+
+//     @media (max-width: 512px) {
+//       @include TextStyle(
+//         $FW: 700,
+//         $FS: 36px,
+//         $LH: 40px,
+//         $LS: 0px,
+//         $CLR: #22343d,
+//         $MB: 18px
+//       );
+//     }
+//   }
+
+//   &__text {
+//     @include TextStyle(
+//       $FW: 400,
+//       $FS: 18px,
+//       $LH: 28px,
+//       $LS: 0px,
+//       $CLR: #22343d,
+//       $MB: 45px
+//     );
+//   }
+
+//   .btns {
+//     @include Display($items: center, $space: start, $gap: 30px, $FD: row);
+
+//     @media (max-width: 1040px) {
+//       @include Display($items: center, $space: center, $gap: 30px, $FD: row);
+//     }
+
+//     &__btn-started {
+//       @include BtnStyle(
+//         $W: 175px,
+//         $P: 15px 0,
+//         $BG: #02897a,
+//         $BTNCLR: white,
+//         $BTNMB: 0px
+//       );
+//     }
+
+//     &__btn-watch {
+//       @include Display($items: center, $space: start, $gap: 8px, $FD: row);
+//       text-decoration: underline;
+//       text-decoration-style: solid;
+//       @include TextStyle(
+//         $FW: 600,
+//         $FS: 16px,
+//         $LH: 100%,
+//         $LS: 0px,
+//         $CLR: #02897a,
+//         $MB: 0px
+//       );
+//     }
+//   }
+// }
+
+@use "../../mixin.scss" as m;
+
+.hero-section {
+  padding: 25px 0 114px;
+
+  @media (max-width: 512px) {
+    padding: 29px 0 99px;
+  }
+}
+
+.hero {
+  @include m.Display(
+    $items: center,
+    $space: space-between,
+    $gap: 0px,
+    $FD: row
+  );
+
+  @media (max-width: 1040px) {
+    @include m.Display(
+      $items: center,
+      $space: space-between,
+      $gap: 10px,
+      $FD: column-reverse
+    );
+  }
+
+  &__content-wrapper {
+    width: 419px;
+
+    @media (max-width: 1040px) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    @include m.TextStyle(
+      $FW: 700,
+      $FS: 40px,
+      $LH: 60px,
+      $LS: 0px,
+      $CLR: #22343d,
+      $MB: 18px
+    );
+
+    @media (max-width: 512px) {
+      @include m.TextStyle(
+        $FW: 700,
+        $FS: 36px,
+        $LH: 40px,
+        $LS: 0px,
+        $CLR: #22343d,
+        $MB: 18px
+      );
+    }
+  }
+
+  &__text {
+    @include m.TextStyle(
+      $FW: 400,
+      $FS: 18px,
+      $LH: 28px,
+      $LS: 0px,
+      $CLR: #22343d,
+      $MB: 45px
+    );
+  }
+
+  .btns {
+    @include m.Display($items: center, $space: start, $gap: 30px, $FD: row);
+
+    @media (max-width: 1040px) {
+      @include m.Display($items: center, $space: center, $gap: 30px, $FD: row);
+    }
+
+    &__btn-started {
+      @include m.BtnStyle(
+        $W: 175px,
+        $P: 15px 0,
+        $BG: #02897a,
+        $BTNCLR: white,
+        $BTNMB: 0px
+      );
+    }
+
+    &__btn-watch {
+      @include m.Display($items: center, $space: start, $gap: 8px, $FD: row);
+      text-decoration: underline;
+      text-decoration-style: solid;
+      @include m.TextStyle(
+        $FW: 600,
+        $FS: 16px,
+        $LH: 100%,
+        $LS: 0px,
+        $CLR: #02897a,
+        $MB: 0px
+      );
+    }
+  }
+}

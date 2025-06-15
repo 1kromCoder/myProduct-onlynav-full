@@ -1,0 +1,157 @@
+// @mixin Display($items, $space, $gap, $FD) {
+//   display: flex;
+//   align-items: $items;
+//   justify-content: $space;
+//   gap: $gap;
+//   flex-direction: $FD;
+// }
+
+// @mixin TextStyle(
+//   $FW: 700,
+//   $FS: 40px,
+//   $LH: 60px,
+//   $LS: 0px,
+//   $CLR: #22343d,
+//   $MB: 18px
+// ) {
+//   font-weight: $FW;
+//   font-size: $FS;
+//   line-height: $LH;
+//   letter-spacing: $LS;
+//   color: $CLR;
+//   margin-bottom: $MB;
+// }
+
+// @mixin BtnStyle($W, $P, $BG, $BTNCLR, $BTNMB) {
+//   @include TextStyle(
+//     $FW: 700,
+//     $FS: 16px,
+//     $LH: 100%,
+//     $LS: 0px,
+//     $CLR: $BTNCLR,
+//     $MB: $BTNMB
+//   );
+//   width: $W;
+//   padding: $P;
+//   border-radius: 4px;
+//   border: 2px solid $BG;
+//   cursor: pointer;
+//   position: relative;
+//   overflow: hidden;
+//   transition: all 0.4s;
+
+//   &:before {
+//     content: "";
+//     width: 50%;
+//     height: 100%;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     background-color: $BG;
+//     z-index: -1;
+//     transition: all 0.4s;
+//   }
+
+//   &:after {
+//     content: "";
+//     width: 50%;
+//     height: 100%;
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     background-color: $BG;
+//     z-index: -1;
+//     transition: all 0.4s;
+//   }
+
+//   &:hover:before {
+//     left: -100%;
+//   }
+
+//   &:hover {
+//     color: $BG;
+//   }
+
+//   &:hover:after {
+//     right: -100%;
+//   }
+// }
+
+@mixin Display($items, $space, $gap, $FD) {
+  display: flex;
+  align-items: $items;
+  justify-content: $space;
+  gap: $gap;
+  flex-direction: $FD;
+}
+
+@mixin TextStyle(
+  $FW: 700,
+  $FS: 40px,
+  $LH: 60px,
+  $LS: 0px,
+  $CLR: #22343d,
+  $MB: 18px
+) {
+  font-weight: $FW;
+  font-size: $FS;
+  line-height: $LH;
+  letter-spacing: $LS;
+  color: $CLR;
+  margin-bottom: $MB;
+}
+
+@mixin BtnStyle($W, $P, $BG, $BTNCLR, $BTNMB) {
+  @include TextStyle(
+    $FW: 700,
+    $FS: 16px,
+    $LH: 100%,
+    $LS: 0px,
+    $CLR: $BTNCLR,
+    $MB: $BTNMB
+  );
+  width: $W;
+  padding: $P;
+  border-radius: 4px;
+  border: 2px solid $BG;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s;
+
+  &:before {
+    content: "";
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $BG;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
+  &:after {
+    content: "";
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $BG;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
+  &:hover:before {
+    left: -100%;
+  }
+
+  &:hover {
+    color: $BG;
+  }
+
+  &:hover:after {
+    right: -100%;
+  }
+}
