@@ -4,11 +4,13 @@ import "./App.css";
 import App from "./App.tsx";
 import Hero from "./modules/Hero/index.tsx";
 import Main from "./components/Main/index.tsx";
+import Title from "./components/Title/index.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <App />
     <Hero />
     <Main />
+    <Title />
   </StrictMode>
 );
